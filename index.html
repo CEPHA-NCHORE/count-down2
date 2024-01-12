@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My PortFolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/CEPHAS-Logo-Final.webp" class="logo">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">PortFolio</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <div class="container">
+          <div class="row">
+            <div class="header-col-1">   
+             <p>UI/UX Designer</p>
+             <h2>Hi, I'm  <span>CEPHA</span> ,<br>from Kenya</h2>
+            </div>
+            <div class="header-col-2">
+              <img id="myImg" src="images/img_lights.jpg" width="300" height="200">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+  </div>
+  <script>
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+  </script>
+</body>
+</html>
